@@ -1,13 +1,9 @@
-let map;
 const cityList = document.getElementById("city-list");
 const distanceList = document.getElementById("distance-list");
 const priceList = document.getElementById("price-list");
 const ratingList = document.getElementById("rating-list");
 const searchButton = document.getElementById("btnSearch");
-const geocoder = new google.maps.Geocoder();
 let markersArray = [];
-
-initializeMap();
 
 // Populate dropdowns
 function fillCityDropdown() {
@@ -68,12 +64,37 @@ fillDistanceDropdown();
 fillRatingDropdown();
 fillPriceDropdown();
 
+window.initMap = function () {
+    console.log("✅ Google Maps API Loaded");
+
+    if (typeof google === "undefined" || !google.maps) {
+        console.error("❌ Google Maps API did not load!");
+        return;
+    }
+
+    initializeMap();
+};
+
+let geocoder;
 // Initialize the map
 function initializeMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 56.946, lng: 24.105 }, // Default center (Riga)
+    console.log("🚀 Initializing Map...");
+
+    const map = document.getElementById("map");
+    if (!map) {
+        console.error("❌ Map element not found.");
+        return;
+    }
+
+    window.map = new google.maps.Map(map, {
+        center: { lat: 56.946, lng: 24.105 }, // Riga, Latvia
         zoom: 8,
     });
+
+    console.log("✅ Map initialized!");
+
+    geocoder = new google.maps.Geocoder();
+    console.log("✅ Geocoder initialized:", geocoder);
 }
 
 // Handle user location
