@@ -1,0 +1,501 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Noto Sans", serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    text-shadow: 0.063rem 0.063rem 0.125rem rgba(0, 0, 0, 0.1);
+}
+
+/*Navbar*/
+.navbar {
+    background-color: transparent !important;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.navbar-nav .nav-item .nav-link {
+    visibility: visible !important;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    padding: 0.5rem 0.9375rem;
+    border-radius: 0.3125rem;
+}
+
+.navbar-nav .nav-item .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0rem 0.25rem 0.375rem rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-light {
+    border: 0.063rem solid #ffffff;
+    background-color: transparent;
+}
+
+.btn-outline-light:hover {
+    color: #000000 !important;
+    background-color: #ffffff;
+}
+
+.btn-success {
+    color: #ffffff;
+    background-color: #28a745;
+    border: 0.063rem solid #28a745;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.navbar-nav .nav-item .btn {
+    margin-right: 0.625rem;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax-img {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+/* Header */
+p a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styling */
+
+.form {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 1.875rem;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0.625rem;
+}
+
+.home form .col-auto {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 12.5rem;
+}
+
+.home form select,
+.home form button {
+    width: 100%;
+    max-width: 15.625rem;
+    height: 2.8125rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 0.063rem solid #ddd;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+.home form select:hover,
+.home form select:focus,
+.home form button:hover,
+.home form button:focus {
+    border-color: #007bff;
+    box-shadow: 0 0.1875rem 0.5rem rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.home form .btn-success {
+    background-color: #28a745;
+    color: #ffffff;
+    border: 0.063rem solid #28a745;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.home form .btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    box-shadow: 0 0.188rem 0.5rem rgba(40, 167, 69, 0.2);
+    transform: translateY(-0.125rem);
+}
+
+.home form .btn-outline-primary {
+    border: 0.063rem solid #007bff;
+    color: #007bff;
+    font-weight: bold;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.home form .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    box-shadow: 0 0.188rem 0.5rem rgba(0, 123, 255, 0.2);
+    transform: translateY(-0.125rem);
+}
+
+/* Map Container */
+.home #map {
+    border: 0.063rem solid black;
+    border-radius: 0.625rem;
+}
+
+/*Places Cards*/
+.home #places-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.625rem;
+}
+
+.home #places-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    justify-content: center;
+}
+.home #places-container .col-md-4 {
+    flex: 0 0 calc(25% - 0.938rem); /* Four columns with gap */
+    max-width: calc(25% - 0.938rem);
+    display: flex;
+    flex-direction: column;
+}
+.home #places-container .card {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+.home #places-container .card:hover {
+    transform: translateY(-0.313rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.home #places-container .card-body {
+    flex: 1 1 auto;
+}
+.home #places-container .card img {
+    width: 100%;
+    max-height: 12.5rem;
+    object-fit: cover;
+    border-radius: 0.313rem;
+}
+
+.home #places-container .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.625rem;
+}
+
+.home #places-list {
+    margin-bottom: 6.25rem;
+}
+
+/*Pagination buttons*/
+#pageNumber {
+    font-size: x-large;
+}
+#nextButton {
+    float: right;
+}
+#backButton {
+    float: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 75rem) {
+    /* 1200px */
+    .home #places-container .col-md-4 {
+        flex: 0 0 calc(33.33% - 0.938rem); /* Three columns with gap */
+        max-width: calc(33.33% - 0.938rem);
+    }
+}
+
+@media (max-width: 62rem) {
+    /* 992px */
+    .home #places-container .col-md-4 {
+        flex: 0 0 calc(50% - 0.938rem); /* Two columns with gap */
+        max-width: calc(50% - 0.938rem);
+    }
+}
+
+@media (max-width: 48rem) {
+    /* 768px */
+    .home #places-container .col-md-4 {
+        flex: 0 0 calc(100% - 0.938rem); /* One column with gap */
+        max-width: calc(100% - 0.938rem);
+    }
+}
+
+/*Add place modal*/
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+textarea,
+input,
+select {
+    border-radius: 0.313rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+/*Menu Page*/
+.menu-page h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+.menu-page table {
+    font-size: 1.25rem;
+}
+
+/*Login Page AND Register Page*/
+.login-card,
+.register-card {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.5rem);
+    border-radius: 2.5em;
+    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.3);
+    padding: 2.5em;
+    color: white !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-card:hover,
+.register-card:hover {
+    transform: scale(1.02);
+}
+.login-page a {
+    color: white !important;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-page a:hover {
+    color: #0468d3 !important;
+}
+.login-page .form-control,
+.register-page .form-control {
+    background: rgba(255, 255, 255, 0.2);
+    border: 0.0625em solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.75em;
+    border-radius: 0.5em;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-page .form-control::placeholder,
+.register-page .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.login-page .form-control:hover,
+.login-page .form-control:focus,
+.register-page .form-control:hover,
+.register-page .form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0.625rem 1.25rem rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+.login-page .card {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    animation: fadeIn 0.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+.login-page img {
+    width: 100%;
+    height: auto;
+    max-height: 28.125rem;
+    object-fit: cover;
+    object-position: bottom;
+    display: block;
+}
+
+.login-page .btn-lg,
+.register-page .btn-lg {
+    background: linear-gradient(135deg, #d6725a, #c55a4a);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0 0.1875rem 0.625rem rgba(255, 100, 75, 0.15);
+}
+.login-page .btn-lg:hover,
+.register-page .btn-lg:hover {
+    filter: brightness(95%);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.3125rem 0.9375rem rgba(255, 100, 75, 0.3);
+}
+.login-page .coffee-image,
+.register-page .coffee-image {
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(1.25rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.register-page {
+    position: relative;
+}
+.register-page .card {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    animation: fadeIn 0.5s ease-in-out forwards;
+    animation-delay: 0.3s;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+.register-page .coffee-image {
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    border-radius: 1em;
+    position: relative;
+}
+.register-page select {
+    background: rgba(255, 255, 255, 0.2);
+    border: 0.0625em solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 1em;
+    border-radius: 0.5em;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+.register-page select:hover,
+.register-page select:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0.625em rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+.register-page .form-select {
+    appearance: auto !important;
+    -webkit-appearance: auto !important;
+    -moz-appearance: auto !important;
+}
+
+.register-page .form-select option {
+    color: black !important;
+}
+
+/*Edit Menu*/
+.container.edit-menu {
+    max-width: 37.5rem;
+    margin: 0 auto;
+    padding: 1.25em;
+    background-color: #f9f9f9;
+    border-radius: 0.5em;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.container.edit-menu h1 {
+    text-align: center;
+    margin-bottom: 1.25em;
+    font-size: xx-large;
+}
+
+.container.edit-menu .form-label {
+    font-weight: 500;
+}
+
+.container.edit-menu .form-control {
+    border: 0.063rem solid #ddd;
+    border-radius: 0.25rem;
+    padding: 0.625em;
+    font-size: 1rem;
+}
+
+.container.edit-menu .form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0.3125rem rgba(40, 167, 69, 0.2);
+}
+
+.container.edit-menu .btn-success {
+    display: block;
+    width: 100%;
+    padding: 0.625em;
+    font-size: 1.125rem;
+    background-color: #28a745;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container.edit-menu .btn-success:hover {
+    background-color: #218838;
+}
+
+.container.edit-menu .mb-3 {
+    margin-bottom: 1.25em;
+}
+.edit-menu .button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.625em;
+    margin-top: 1.25em;
+}
+
+.edit-menu button,
+.edit-menu .btn {
+    padding: 0.625em 1.25em;
+    font-size: 1rem;
+    border-radius: 0.3125rem;
+}

@@ -1,0 +1,8 @@
+To do NOW:
+1. Add option for cafe owner to add new menu, cuz now there is only Edit/Delete buttons. DONE
+2. Add function add photo while editing existing menu.
+3. Find the solution to display more then 20 places per page (NextPage button etc)
+
+To to later:
+1. Test and find solution for image uploading: When image is under 2MB it saves data and image, BUT if image is over 2MB it doesn't save data and image...
+2. Check the rating functions (does it return correct places)
