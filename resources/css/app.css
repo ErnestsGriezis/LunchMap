@@ -308,7 +308,8 @@ select {
 }
 
 .login-page a:hover {
-    color: #0468d3 !important;
+    color: #f5a78b !important;
+    text-decoration: underline;
 }
 .login-page .form-control,
 .register-page .form-control {
@@ -432,6 +433,77 @@ select {
 
 .register-page .form-select option {
     color: black !important;
+}
+
+/*Forgot-password Page AND Reset-password Page*/
+.forgot-password-card,
+.reset-password-card {
+    min-height: 30rem;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.75rem);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    padding: 2.5rem;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.forgot-password-card:hover,
+.reset-password-card:hover {
+    transform: scale(1.02);
+    backdrop-filter: none;
+}
+
+.forgot-password-page .btn-lg,
+.reset-password-page .btn-lg {
+    background: linear-gradient(135deg, #d6725a, #c55a4a);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    text-transform: uppercase;
+    box-shadow: 0 0.1875rem 0.625rem rgba(255, 100, 75, 0.15);
+}
+
+.forgot-password-page .btn-lg:hover,
+.reset-password-page .btn-lg:hover {
+    filter: brightness(95%);
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.3125rem 0.9375rem rgba(255, 100, 75, 0.3);
+}
+
+.forgot-password-page .form-control,
+.reset-password-page .form-control {
+    background: rgba(255, 255, 255, 0.2);
+    border: 0.0625em solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.75em;
+    border-radius: 0.5em;
+    transition: all 0.3s ease-in-out;
+}
+
+.forgot-password-page .form-control::placeholder,
+.reset-password-page .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.forgot-password-page .form-control:hover,
+.forgot-password-page .form-control:focus,
+.reset-password-page .form-control:hover,
+.reset-password-page .form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0.625rem 1.25rem rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+.forgot-password-page a:hover {
+    color: #f5a78b !important;
+    text-decoration: underline;
 }
 
 /*Edit Menu*/

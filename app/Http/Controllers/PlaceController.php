@@ -23,21 +23,17 @@ class PlaceController extends Controller
         ]);
 
         if ($request->hasFile('photo')) {
-            try {
-                $validatedData['photo'] = $request->file('photo')->store('photos', 'public');
-            } catch (\Exception $e) {
 
-                $validatedData['photo'] = null;
-            }
+            $validatedData['photo'] = $request->file('photo')->store('photos', 'public');
         }
-
+        //dd($request->all());
         Cafe::create([
+            'id_user' => Auth::id(), // Link the place to the logged-in user
             'name' => $validatedData['name'],
             'location' => $validatedData['location'],
             'price_category' => $validatedData['price_category'],
             'rating' => $validatedData['rating'],
-            'description' => $validatedData['description'],
-            'id_user' => Auth::id(), // Link the place to the logged-in user
+            'description' => $validatedData['description'] ?? null,
             'photo' => $validatedData['photo'] ?? null,
         ]);
         return redirect()->route('home');

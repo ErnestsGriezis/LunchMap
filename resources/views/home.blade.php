@@ -69,9 +69,11 @@
             <h3 id="places-heading" class="text-center my-3"></h3>
             <div class="row" id="places-container"></div>
             <div class="text-center mt-3">
-                <button id="backButton" class="btn btn-primary" style="display: none;"><i class="bi bi-caret-left"></i></button>
+                <button id="backButton" class="btn btn-primary" style="display: none;"><i
+                        class="bi bi-caret-left"></i></button>
                 <label id="pageNumber"></label>
-                <button id="nextButton" class="btn btn-primary" style="display: none;"><i class="bi bi-caret-right"></i></button>
+                <button id="nextButton" class="btn btn-primary" style="display: none;"><i
+                        class="bi bi-caret-right"></i></button>
             </div>
         </div>
     </div>

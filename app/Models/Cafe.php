@@ -10,9 +10,9 @@ class Cafe extends Model
 {
     use HasFactory;
 
-    protected $table = 'cafes'; 
+    protected $table = 'cafes';
     protected $primaryKey = 'id_cafe';
-    protected $fillable = ['name', 'location', 'id_user', 'description'];
+    protected $fillable = ['name', 'location', 'id_user', 'description', 'photo', 'price_category', 'rating'];
 
     public function owner()
     {
